@@ -13,15 +13,8 @@ class ViewModel {
     var statusColor = Dynamic(UIColor.lightGray)
     
     var authViewModel = AuthViewModel()
-//    func userLoginPressed(login: String, password: String) {
-//        if login != User.logins[0].login || password != User.logins[0].password {
-//            statusText.value = "Log in failed"
-//            statusColor.value = UIColor.systemRed
-//        } else {
-//            statusText.value = "You successfully logged in"
-//            statusColor.value = UIColor.systemGreen
-//        }
-//    }
+
+    var signIn = false
     
     func userLoginPressed(login: String, password: String ){
         authViewModel.login(email: login, password: password) { result in
@@ -29,6 +22,7 @@ class ViewModel {
             case .success(let user):
                 self.statusText.value = "You successfully logged in!"
                 self.statusColor.value = .systemGreen
+                self.signIn = true
                 
             case .failure(let error):
                 self.statusText.value = "Log in failed: \(error.localizedDescription)"
@@ -48,6 +42,13 @@ class ViewModel {
                 self.statusColor.value = .systemRed
             }
         }
+    }
+    
+    func signInProccess() -> Bool {
+        if signIn == true {
+            return true
+        }
+        return false
     }
     
     

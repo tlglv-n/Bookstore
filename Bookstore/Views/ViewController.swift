@@ -24,8 +24,15 @@ class ViewController: UIViewController {
     @IBAction func loginButtonPressed(_ sender: Any) {
         DispatchQueue.main.async {
             self.viewModel.userLoginPressed(login: (self.loginField.text ?? ""), password: (self.passwordField.text ?? ""))
-            let mainView = TableBookView()
-            self.navigationController?.pushViewController(mainView, animated: true)
+            
+            if self.viewModel.signInProccess() {
+                let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                let tabBarView = mainStoryboard.instantiateViewController(withIdentifier: "TabBarController") as! TabBarViewController
+                self.addChild(tabBarView)
+                self.view.addSubview(tabBarView.view)
+                tabBarView.didMove(toParent: self)
+            }
+            
         }
         
     }
@@ -37,8 +44,8 @@ class ViewController: UIViewController {
     }
     
     func initialState() {
-        statusLabel.text = "Please enter your login credentials"
-        statusLabel.textColor = UIColor.lightGray
+        statusLabel?.text = "Please enter your login credentials"
+        statusLabel?.textColor = UIColor.lightGray
     }
     
     func bindViewModel() {

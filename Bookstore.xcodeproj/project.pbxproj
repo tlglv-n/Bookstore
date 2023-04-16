@@ -13,7 +13,6 @@
 		ECEDA32929E7373400E27A84 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECEDA32729E7373400E27A84 /* Main.storyboard */; };
 		ECEDA32B29E7373600E27A84 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECEDA32A29E7373600E27A84 /* Assets.xcassets */; };
 		ECEDA32E29E7373600E27A84 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECEDA32C29E7373600E27A84 /* LaunchScreen.storyboard */; };
-		ECEDA33D29E8154F00E27A84 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECEDA33C29E8154F00E27A84 /* User.swift */; };
 		ECEDA33F29E8161900E27A84 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECEDA33E29E8161900E27A84 /* ViewModel.swift */; };
 		ECEDA34229E8168000E27A84 /* Dynamic.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECEDA34129E8168000E27A84 /* Dynamic.swift */; };
 		ECEDA34629EB097A00E27A84 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = ECEDA34529EB097A00E27A84 /* GoogleService-Info.plist */; };
@@ -21,9 +20,10 @@
 		ECEDA34D29EB0EF500E27A84 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECEDA34C29EB0EF500E27A84 /* AuthViewModel.swift */; };
 		ECEDA34F29EB102100E27A84 /* AuthServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECEDA34E29EB102100E27A84 /* AuthServiceProtocol.swift */; };
 		ECEDA35129EB10F400E27A84 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECEDA35029EB10F400E27A84 /* AuthService.swift */; };
-		ECEDA35329EB3C6C00E27A84 /* TableBookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECEDA35229EB3C6C00E27A84 /* TableBookView.swift */; };
-		ECEDA37F29EB587600E27A84 /* TableFavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECEDA37E29EB587600E27A84 /* TableFavoritesView.swift */; };
 		ECEDA38129EB5A0400E27A84 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECEDA38029EB5A0400E27A84 /* TabBarViewController.swift */; };
+		ECEDA38729EC8E4400E27A84 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECEDA38629EC8E4400E27A84 /* User.swift */; };
+		ECEDA38929EC9B3500E27A84 /* TableBookViewTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECEDA38829EC9B3500E27A84 /* TableBookViewTableViewController.swift */; };
+		ECEDA38B29EC9BB300E27A84 /* TableFavorites.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECEDA38A29EC9BB300E27A84 /* TableFavorites.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,16 +35,16 @@
 		ECEDA32A29E7373600E27A84 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ECEDA32D29E7373600E27A84 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ECEDA32F29E7373600E27A84 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		ECEDA33C29E8154F00E27A84 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		ECEDA33E29E8161900E27A84 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		ECEDA34129E8168000E27A84 /* Dynamic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dynamic.swift; sourceTree = "<group>"; };
 		ECEDA34529EB097A00E27A84 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		ECEDA34C29EB0EF500E27A84 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		ECEDA34E29EB102100E27A84 /* AuthServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthServiceProtocol.swift; sourceTree = "<group>"; };
 		ECEDA35029EB10F400E27A84 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
-		ECEDA35229EB3C6C00E27A84 /* TableBookView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableBookView.swift; sourceTree = "<group>"; };
-		ECEDA37E29EB587600E27A84 /* TableFavoritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableFavoritesView.swift; sourceTree = "<group>"; };
 		ECEDA38029EB5A0400E27A84 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		ECEDA38629EC8E4400E27A84 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		ECEDA38829EC9B3500E27A84 /* TableBookViewTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableBookViewTableViewController.swift; sourceTree = "<group>"; };
+		ECEDA38A29EC9BB300E27A84 /* TableFavorites.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableFavorites.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,9 +81,9 @@
 				ECEDA33629E8133100E27A84 /* ViewModels */,
 				ECEDA32129E7373400E27A84 /* AppDelegate.swift */,
 				ECEDA32329E7373400E27A84 /* SceneDelegate.swift */,
+				ECEDA38529EC8E3B00E27A84 /* Models */,
 				ECEDA33529E8132100E27A84 /* Views */,
 				ECEDA32A29E7373600E27A84 /* Assets.xcassets */,
-				ECEDA33B29E8153A00E27A84 /* Models */,
 				ECEDA32F29E7373600E27A84 /* Info.plist */,
 				ECEDA34529EB097A00E27A84 /* GoogleService-Info.plist */,
 			);
@@ -94,9 +94,9 @@
 			isa = PBXGroup;
 			children = (
 				ECEDA32529E7373400E27A84 /* ViewController.swift */,
-				ECEDA35229EB3C6C00E27A84 /* TableBookView.swift */,
+				ECEDA38A29EC9BB300E27A84 /* TableFavorites.swift */,
+				ECEDA38829EC9B3500E27A84 /* TableBookViewTableViewController.swift */,
 				ECEDA38029EB5A0400E27A84 /* TabBarViewController.swift */,
-				ECEDA37E29EB587600E27A84 /* TableFavoritesView.swift */,
 				ECEDA33729E8134200E27A84 /* Storyboards */,
 			);
 			path = Views;
@@ -123,20 +123,20 @@
 			path = Storyboards;
 			sourceTree = "<group>";
 		};
-		ECEDA33B29E8153A00E27A84 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				ECEDA33C29E8154F00E27A84 /* User.swift */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
 		ECEDA34029E8166F00E27A84 /* Bindings */ = {
 			isa = PBXGroup;
 			children = (
 				ECEDA34129E8168000E27A84 /* Dynamic.swift */,
 			);
 			path = Bindings;
+			sourceTree = "<group>";
+		};
+		ECEDA38529EC8E3B00E27A84 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				ECEDA38629EC8E4400E27A84 /* User.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -218,17 +218,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				ECEDA33F29E8161900E27A84 /* ViewModel.swift in Sources */,
-				ECEDA33D29E8154F00E27A84 /* User.swift in Sources */,
 				ECEDA32629E7373400E27A84 /* ViewController.swift in Sources */,
-				ECEDA35329EB3C6C00E27A84 /* TableBookView.swift in Sources */,
+				ECEDA38929EC9B3500E27A84 /* TableBookViewTableViewController.swift in Sources */,
 				ECEDA38129EB5A0400E27A84 /* TabBarViewController.swift in Sources */,
 				ECEDA34D29EB0EF500E27A84 /* AuthViewModel.swift in Sources */,
 				ECEDA34229E8168000E27A84 /* Dynamic.swift in Sources */,
+				ECEDA38B29EC9BB300E27A84 /* TableFavorites.swift in Sources */,
 				ECEDA32229E7373400E27A84 /* AppDelegate.swift in Sources */,
 				ECEDA35129EB10F400E27A84 /* AuthService.swift in Sources */,
+				ECEDA38729EC8E4400E27A84 /* User.swift in Sources */,
 				ECEDA34F29EB102100E27A84 /* AuthServiceProtocol.swift in Sources */,
 				ECEDA32429E7373400E27A84 /* SceneDelegate.swift in Sources */,
-				ECEDA37F29EB587600E27A84 /* TableFavoritesView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
