@@ -1,19 +1,20 @@
 //
-//  ViewController.swift
+//  TableFavoritesView.swift
 //  Bookstore
 //
-//  Created by Nurikk T. on 13.04.2023.
+//  Created by Nurikk T. on 16.04.2023.
 //
 
 import UIKit
 
-class ViewController: UIViewController {
+class TableFavoritesView: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
         // Do any additional setup after loading the view.
     }
+    
 
 
 }
-

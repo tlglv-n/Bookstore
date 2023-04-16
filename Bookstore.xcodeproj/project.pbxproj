@@ -13,6 +13,17 @@
 		ECEDA32929E7373400E27A84 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECEDA32729E7373400E27A84 /* Main.storyboard */; };
 		ECEDA32B29E7373600E27A84 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECEDA32A29E7373600E27A84 /* Assets.xcassets */; };
 		ECEDA32E29E7373600E27A84 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECEDA32C29E7373600E27A84 /* LaunchScreen.storyboard */; };
+		ECEDA33D29E8154F00E27A84 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECEDA33C29E8154F00E27A84 /* User.swift */; };
+		ECEDA33F29E8161900E27A84 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECEDA33E29E8161900E27A84 /* ViewModel.swift */; };
+		ECEDA34229E8168000E27A84 /* Dynamic.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECEDA34129E8168000E27A84 /* Dynamic.swift */; };
+		ECEDA34629EB097A00E27A84 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = ECEDA34529EB097A00E27A84 /* GoogleService-Info.plist */; };
+		ECEDA34929EB0C0C00E27A84 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = ECEDA34829EB0C0C00E27A84 /* FirebaseAuth */; };
+		ECEDA34D29EB0EF500E27A84 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECEDA34C29EB0EF500E27A84 /* AuthViewModel.swift */; };
+		ECEDA34F29EB102100E27A84 /* AuthServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECEDA34E29EB102100E27A84 /* AuthServiceProtocol.swift */; };
+		ECEDA35129EB10F400E27A84 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECEDA35029EB10F400E27A84 /* AuthService.swift */; };
+		ECEDA35329EB3C6C00E27A84 /* TableBookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECEDA35229EB3C6C00E27A84 /* TableBookView.swift */; };
+		ECEDA37F29EB587600E27A84 /* TableFavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECEDA37E29EB587600E27A84 /* TableFavoritesView.swift */; };
+		ECEDA38129EB5A0400E27A84 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECEDA38029EB5A0400E27A84 /* TabBarViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +35,16 @@
 		ECEDA32A29E7373600E27A84 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ECEDA32D29E7373600E27A84 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ECEDA32F29E7373600E27A84 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ECEDA33C29E8154F00E27A84 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		ECEDA33E29E8161900E27A84 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		ECEDA34129E8168000E27A84 /* Dynamic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dynamic.swift; sourceTree = "<group>"; };
+		ECEDA34529EB097A00E27A84 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		ECEDA34C29EB0EF500E27A84 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
+		ECEDA34E29EB102100E27A84 /* AuthServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthServiceProtocol.swift; sourceTree = "<group>"; };
+		ECEDA35029EB10F400E27A84 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		ECEDA35229EB3C6C00E27A84 /* TableBookView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableBookView.swift; sourceTree = "<group>"; };
+		ECEDA37E29EB587600E27A84 /* TableFavoritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableFavoritesView.swift; sourceTree = "<group>"; };
+		ECEDA38029EB5A0400E27A84 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ECEDA34929EB0C0C00E27A84 /* FirebaseAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,15 +78,65 @@
 		ECEDA32029E7373400E27A84 /* Bookstore */ = {
 			isa = PBXGroup;
 			children = (
+				ECEDA33629E8133100E27A84 /* ViewModels */,
 				ECEDA32129E7373400E27A84 /* AppDelegate.swift */,
 				ECEDA32329E7373400E27A84 /* SceneDelegate.swift */,
-				ECEDA32529E7373400E27A84 /* ViewController.swift */,
-				ECEDA32729E7373400E27A84 /* Main.storyboard */,
+				ECEDA33529E8132100E27A84 /* Views */,
 				ECEDA32A29E7373600E27A84 /* Assets.xcassets */,
-				ECEDA32C29E7373600E27A84 /* LaunchScreen.storyboard */,
+				ECEDA33B29E8153A00E27A84 /* Models */,
 				ECEDA32F29E7373600E27A84 /* Info.plist */,
+				ECEDA34529EB097A00E27A84 /* GoogleService-Info.plist */,
 			);
 			path = Bookstore;
+			sourceTree = "<group>";
+		};
+		ECEDA33529E8132100E27A84 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				ECEDA32529E7373400E27A84 /* ViewController.swift */,
+				ECEDA35229EB3C6C00E27A84 /* TableBookView.swift */,
+				ECEDA38029EB5A0400E27A84 /* TabBarViewController.swift */,
+				ECEDA37E29EB587600E27A84 /* TableFavoritesView.swift */,
+				ECEDA33729E8134200E27A84 /* Storyboards */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		ECEDA33629E8133100E27A84 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				ECEDA34029E8166F00E27A84 /* Bindings */,
+				ECEDA33E29E8161900E27A84 /* ViewModel.swift */,
+				ECEDA34C29EB0EF500E27A84 /* AuthViewModel.swift */,
+				ECEDA34E29EB102100E27A84 /* AuthServiceProtocol.swift */,
+				ECEDA35029EB10F400E27A84 /* AuthService.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		ECEDA33729E8134200E27A84 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				ECEDA32729E7373400E27A84 /* Main.storyboard */,
+				ECEDA32C29E7373600E27A84 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		ECEDA33B29E8153A00E27A84 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				ECEDA33C29E8154F00E27A84 /* User.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		ECEDA34029E8166F00E27A84 /* Bindings */ = {
+			isa = PBXGroup;
+			children = (
+				ECEDA34129E8168000E27A84 /* Dynamic.swift */,
+			);
+			path = Bindings;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +155,9 @@
 			dependencies = (
 			);
 			name = Bookstore;
+			packageProductDependencies = (
+				ECEDA34829EB0C0C00E27A84 /* FirebaseAuth */,
+			);
 			productName = Bookstore;
 			productReference = ECEDA31E29E7373400E27A84 /* Bookstore.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +186,9 @@
 				Base,
 			);
 			mainGroup = ECEDA31529E7373400E27A84;
+			packageReferences = (
+				ECEDA34729EB0C0C00E27A84 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = ECEDA31F29E7373400E27A84 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -126,6 +204,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ECEDA32E29E7373600E27A84 /* LaunchScreen.storyboard in Resources */,
+				ECEDA34629EB097A00E27A84 /* GoogleService-Info.plist in Resources */,
 				ECEDA32B29E7373600E27A84 /* Assets.xcassets in Resources */,
 				ECEDA32929E7373400E27A84 /* Main.storyboard in Resources */,
 			);
@@ -138,9 +217,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ECEDA33F29E8161900E27A84 /* ViewModel.swift in Sources */,
+				ECEDA33D29E8154F00E27A84 /* User.swift in Sources */,
 				ECEDA32629E7373400E27A84 /* ViewController.swift in Sources */,
+				ECEDA35329EB3C6C00E27A84 /* TableBookView.swift in Sources */,
+				ECEDA38129EB5A0400E27A84 /* TabBarViewController.swift in Sources */,
+				ECEDA34D29EB0EF500E27A84 /* AuthViewModel.swift in Sources */,
+				ECEDA34229E8168000E27A84 /* Dynamic.swift in Sources */,
 				ECEDA32229E7373400E27A84 /* AppDelegate.swift in Sources */,
+				ECEDA35129EB10F400E27A84 /* AuthService.swift in Sources */,
+				ECEDA34F29EB102100E27A84 /* AuthServiceProtocol.swift in Sources */,
 				ECEDA32429E7373400E27A84 /* SceneDelegate.swift in Sources */,
+				ECEDA37F29EB587600E27A84 /* TableFavoritesView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -290,7 +378,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Bookstore/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = Main;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -317,7 +405,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Bookstore/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = Main;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -356,6 +444,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		ECEDA34729EB0C0C00E27A84 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		ECEDA34829EB0C0C00E27A84 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ECEDA34729EB0C0C00E27A84 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = ECEDA31629E7373400E27A84 /* Project object */;
 }
