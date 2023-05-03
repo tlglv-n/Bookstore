@@ -19,6 +19,17 @@ final class TableBookViewController: UIViewController {
         super.viewDidLoad()
 
         setupTableView()
+        bookStore.fetchNewReleases(completionHandler: handle)
+    }
+    
+    private func handle(_ result: Result<NewBooksResponse, Error>) {
+        switch result {
+        case .success(let response):
+            books = response.books
+            tableView?.reloadData()
+        case .failure:
+            return
+        }
     }
     
     private func setupTableView() {
@@ -44,19 +55,13 @@ extension TableBookViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(BookCell.self, for: indexPath)
         
         let book = books[indexPath.row]
-        
-//        cell.identifier = book.isbn13
-//        cell.titleLabel?.text = book.title
-//        cell.subtitleLabel?.text = book.subtitle
-//        cell.priceLabel?.text = book.price
-//        cell.isbn13Label?.text = book.isbn13
-        
-        cell.identifier = "num1"
-        cell.titleLabel?.text = "isosios"
-        cell.subtitleLabel?.text = "swifts"
-        cell.priceLabel?.text = "1300"
-        cell.isbn13Label?.text = "1231231"
-        
+
+        cell.identifier = book.isbn13
+        cell.titleLabel?.text = book.title
+        cell.subtitleLabel?.text = book.subtitle
+        cell.priceLabel?.text = book.price
+        cell.isbn13Label?.text = book.isbn13
+
         if let thumbnailURL = book.thumbnailURL {
             ImageProvider.shared.fetch(from: thumbnailURL) { (result) in
                 if case .success(let image) = result, cell.identifier == book.isbn13 {
@@ -66,6 +71,7 @@ extension TableBookViewController: UITableViewDataSource {
         }
         return cell
     }
+
 }
 
 extension TableBookViewController: UITableViewDelegate {
