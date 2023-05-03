@@ -34,14 +34,6 @@ final class TableBookViewController: UIViewController {
 
 }
 
-extension TableBookViewController: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let book = books[indexPath.row]
-        let bookInfoViewController = BookInfoViewController.instantiate(isbn13: book.isbn13, bookStore: bookStore)
-        present(bookInfoViewController, animated: true, completion: nil)
-    }
-}
-
 extension TableBookViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -53,15 +45,34 @@ extension TableBookViewController: UITableViewDataSource {
         
         let book = books[indexPath.row]
         
-        cell.identifier = book.isbn13
-        cell.titleLabel?.text = book.title
-        cell.subtitleLabel?.text = book.subtitle
-        cell.priceLabel?.text = book.price
-        cell.isbn13Label?.text = book.isbn13
+//        cell.identifier = book.isbn13
+//        cell.titleLabel?.text = book.title
+//        cell.subtitleLabel?.text = book.subtitle
+//        cell.priceLabel?.text = book.price
+//        cell.isbn13Label?.text = book.isbn13
+        
+        cell.identifier = "num1"
+        cell.titleLabel?.text = "isosios"
+        cell.subtitleLabel?.text = "swifts"
+        cell.priceLabel?.text = "1300"
+        cell.isbn13Label?.text = "1231231"
         
         if let thumbnailURL = book.thumbnailURL {
-            ImageProvider.shared
+            ImageProvider.shared.fetch(from: thumbnailURL) { (result) in
+                if case .success(let image) = result, cell.identifier == book.isbn13 {
+                    cell.thumbnailImageView?.image = image
+                }
+            }
         }
+        return cell
+    }
+}
+
+extension TableBookViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let book = books[indexPath.row]
+        let bookInfoViewController = BookInfoViewController.instatiate(isbn13: book.isbn13, bookStore: bookStore)
+        present(bookInfoViewController, animated: true, completion: nil)
     }
 }
 

@@ -13,15 +13,22 @@ class TabBarViewController: UITabBarController {
         super.viewDidLoad()
 
         viewControllers?.forEach(setBookStore(on:))
-        delegate = self
+//        delegate = self
     }
     
-
-}
-
-extension TabBarViewController: UITabBarControllerDelegate {
-    func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
-        
-        _ = (viewController as? SearchViewController)?.focusSearchBar()
+    private func setBookStore(on viewController: UIViewController) {
+        _setBookStore(on: viewController)
+        viewController.children.forEach(_setBookStore(on:))
+    }
+    
+    private func _setBookStore(on viewController: UIViewController) {
+        (viewController as? BookStoreView)?.set(ITBookStoreService())
     }
 }
+
+//extension TabBarViewController: UITabBarControllerDelegate {
+//    func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
+//
+//        _ = (viewController as? SearchViewController)?.focusSearchBar()
+//    }
+//}

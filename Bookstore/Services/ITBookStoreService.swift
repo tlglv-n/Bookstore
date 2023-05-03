@@ -8,7 +8,7 @@
 import Foundation
 import BookStoreKit
 
-struct ITBookStoreService {
+struct ITBookStoreService: BookStoreService {
     var searchEngine: SearchEngine {
         return BookStore.deafultSearchEngine
     }

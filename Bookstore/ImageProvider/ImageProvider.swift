@@ -28,7 +28,8 @@ struct ImageProvider {
             completionHandler?(.success(image))
         } else {
             downloadImage(from: url) { (result) in
-                
+                result.success { self.cache.setObject($0, forKey: url.imageCacheKey) }
+                completionHandler?(result)
             }
         }
         
@@ -40,6 +41,7 @@ struct ImageProvider {
             completionHandler(imageResult)
         }
     }
+    
 }
 
 private extension URL {

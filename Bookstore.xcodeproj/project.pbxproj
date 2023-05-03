@@ -18,6 +18,9 @@
 		EC246A0B2A0041F100E030B7 /* ImageProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC246A0A2A0041F100E030B7 /* ImageProvider.swift */; };
 		EC246A0D2A00443600E030B7 /* ImageProviderError.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC246A0C2A00443600E030B7 /* ImageProviderError.swift */; };
 		EC246A0F2A0044A000E030B7 /* Result+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC246A0E2A0044A000E030B7 /* Result+Extension.swift */; };
+		EC246A112A0195F300E030B7 /* Unwrappable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC246A102A0195F300E030B7 /* Unwrappable.swift */; };
+		EC246A132A019A0E00E030B7 /* Foundation+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC246A122A019A0E00E030B7 /* Foundation+Extensions.swift */; };
+		EC246A152A019B9700E030B7 /* BookInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC246A142A019B9700E030B7 /* BookInfoViewController.swift */; };
 		EC59D4CC29FEF84D00C082B7 /* Networking.docc in Sources */ = {isa = PBXBuildFile; fileRef = EC59D4CB29FEF84D00C082B7 /* Networking.docc */; };
 		EC59D4D229FEF84D00C082B7 /* Networking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC59D4C829FEF84D00C082B7 /* Networking.framework */; };
 		EC59D4D929FEF84D00C082B7 /* NetworkingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC59D4D829FEF84D00C082B7 /* NetworkingTests.swift */; };
@@ -152,6 +155,9 @@
 		EC246A0A2A0041F100E030B7 /* ImageProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageProvider.swift; sourceTree = "<group>"; };
 		EC246A0C2A00443600E030B7 /* ImageProviderError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageProviderError.swift; sourceTree = "<group>"; };
 		EC246A0E2A0044A000E030B7 /* Result+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Result+Extension.swift"; sourceTree = "<group>"; };
+		EC246A102A0195F300E030B7 /* Unwrappable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Unwrappable.swift; sourceTree = "<group>"; };
+		EC246A122A019A0E00E030B7 /* Foundation+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Foundation+Extensions.swift"; sourceTree = "<group>"; };
+		EC246A142A019B9700E030B7 /* BookInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookInfoViewController.swift; sourceTree = "<group>"; };
 		EC59D4C829FEF84D00C082B7 /* Networking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Networking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC59D4CA29FEF84D00C082B7 /* Networking.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Networking.h; sourceTree = "<group>"; };
 		EC59D4CB29FEF84D00C082B7 /* Networking.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = Networking.docc; sourceTree = "<group>"; };
@@ -262,6 +268,8 @@
 				EC246A052A003CD300E030B7 /* Unspecified.swift */,
 				EC246A072A003D4D00E030B7 /* UIKit+Extension.swift */,
 				EC246A0E2A0044A000E030B7 /* Result+Extension.swift */,
+				EC246A102A0195F300E030B7 /* Unwrappable.swift */,
+				EC246A122A019A0E00E030B7 /* Foundation+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -413,6 +421,7 @@
 				ECEDA38A29EC9BB300E27A84 /* TableFavorites.swift */,
 				ECEDA38029EB5A0400E27A84 /* TabBarViewController.swift */,
 				EC2469FD2A0029BC00E030B7 /* TableBookViewController.swift */,
+				EC246A142A019B9700E030B7 /* BookInfoViewController.swift */,
 				ECEDA33729E8134200E27A84 /* Storyboards */,
 			);
 			path = Views;
@@ -754,12 +763,15 @@
 				ECEDA35129EB10F400E27A84 /* AuthService.swift in Sources */,
 				EC2469FC2A00258D00E030B7 /* ITBookStoreService.swift in Sources */,
 				ECEDA38729EC8E4400E27A84 /* User.swift in Sources */,
+				EC246A152A019B9700E030B7 /* BookInfoViewController.swift in Sources */,
 				ECEDA34F29EB102100E27A84 /* AuthServiceProtocol.swift in Sources */,
 				EC2469FA2A00254400E030B7 /* BookStoreView.swift in Sources */,
+				EC246A132A019A0E00E030B7 /* Foundation+Extensions.swift in Sources */,
 				EC2469FE2A0029BC00E030B7 /* TableBookViewController.swift in Sources */,
 				ECEDA32429E7373400E27A84 /* SceneDelegate.swift in Sources */,
 				EC246A082A003D4D00E030B7 /* UIKit+Extension.swift in Sources */,
 				EC246A0B2A0041F100E030B7 /* ImageProvider.swift in Sources */,
+				EC246A112A0195F300E030B7 /* Unwrappable.swift in Sources */,
 				ECEDA38E29F4865E00E27A84 /* BookStoreService.swift in Sources */,
 				EC246A0D2A00443600E030B7 /* ImageProviderError.swift in Sources */,
 			);
