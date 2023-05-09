@@ -54,6 +54,7 @@
 		EC59D5222A0007B300C082B7 /* ITBookStoreProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC59D5212A0007B300C082B7 /* ITBookStoreProvider.swift */; };
 		EC59D5252A001EF500C082B7 /* Result + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC59D5242A001EF500C082B7 /* Result + Extensions.swift */; };
 		EC59D5272A0020A300C082B7 /* Debouncer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC59D5262A0020A300C082B7 /* Debouncer.swift */; };
+		EC9A89762A0A41EE00E1E0AF /* BookStoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EC9A89742A0A41EE00E1E0AF /* BookStoreData.xcdatamodeld */; };
 		ECEDA32229E7373400E27A84 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECEDA32129E7373400E27A84 /* AppDelegate.swift */; };
 		ECEDA32429E7373400E27A84 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECEDA32329E7373400E27A84 /* SceneDelegate.swift */; };
 		ECEDA32629E7373400E27A84 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECEDA32529E7373400E27A84 /* ViewController.swift */; };
@@ -184,6 +185,7 @@
 		EC748D9229FEC4410046E4C8 /* NewBooksResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewBooksResponse.swift; sourceTree = "<group>"; };
 		EC748D9429FEC4970046E4C8 /* SearchBookResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBookResponse.swift; sourceTree = "<group>"; };
 		EC748D9629FED84A0046E4C8 /* NewBooksAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewBooksAPI.swift; sourceTree = "<group>"; };
+		EC9A89752A0A41EE00E1E0AF /* BookStoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BookStoreData.xcdatamodel; sourceTree = "<group>"; };
 		ECEDA31E29E7373400E27A84 /* Bookstore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bookstore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECEDA32129E7373400E27A84 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ECEDA32329E7373400E27A84 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -374,6 +376,7 @@
 		ECEDA31529E7373400E27A84 = {
 			isa = PBXGroup;
 			children = (
+				EC9A89742A0A41EE00E1E0AF /* BookStoreData.xcdatamodeld */,
 				ECEDA32029E7373400E27A84 /* Bookstore */,
 				EC59D4C929FEF84D00C082B7 /* Networking */,
 				EC59D4D729FEF84D00C082B7 /* NetworkingTests */,
@@ -768,6 +771,7 @@
 				EC2469FA2A00254400E030B7 /* BookStoreView.swift in Sources */,
 				EC246A132A019A0E00E030B7 /* Foundation+Extensions.swift in Sources */,
 				EC2469FE2A0029BC00E030B7 /* TableBookViewController.swift in Sources */,
+				EC9A89762A0A41EE00E1E0AF /* BookStoreData.xcdatamodeld in Sources */,
 				ECEDA32429E7373400E27A84 /* SceneDelegate.swift in Sources */,
 				EC246A082A003D4D00E030B7 /* UIKit+Extension.swift in Sources */,
 				EC246A0B2A0041F100E030B7 /* ImageProvider.swift in Sources */,
@@ -1263,6 +1267,19 @@
 			productName = FirebaseAuth;
 		};
 /* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		EC9A89742A0A41EE00E1E0AF /* BookStoreData.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				EC9A89752A0A41EE00E1E0AF /* BookStoreData.xcdatamodel */,
+			);
+			currentVersion = EC9A89752A0A41EE00E1E0AF /* BookStoreData.xcdatamodel */;
+			path = BookStoreData.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = ECEDA31629E7373400E27A84 /* Project object */;
 }
