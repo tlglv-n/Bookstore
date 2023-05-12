@@ -7,6 +7,7 @@
 
 import UIKit
 import BookStoreKit
+import CoreData
 
 class BookInfoViewController: UIViewController {
 
@@ -28,9 +29,12 @@ class BookInfoViewController: UIViewController {
         }
     }
     
-    
+//    private var isFavorite = false
+    private lazy var book: Book = unspecified()
     private(set) lazy var isbn13: String = unspecified()
     private lazy var bookStore: BookStoreService = unspecified()
+    
+    private let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,10 +43,11 @@ class BookInfoViewController: UIViewController {
     }
     
     
-    static func instatiate(isbn13: String, bookStore: BookStoreService) -> BookInfoViewController {
+    static func instatiate(isbn13: String, bookStore: BookStoreService, book: Book) -> BookInfoViewController {
         let bookInfo = UIStoryboard.main.instantiateViewController(BookInfoViewController.self)
         bookInfo.bookStore = bookStore
         bookInfo.isbn13 = isbn13
+        bookInfo.book = book
         return bookInfo
     }
     
@@ -74,7 +79,6 @@ class BookInfoViewController: UIViewController {
                 self?.thumbnailImageView?.image = try? result.get()
             }
         }
-        
     }
     
     private func handle(_ error: Error) {
@@ -94,9 +98,30 @@ class BookInfoViewController: UIViewController {
     }
     
     @IBAction func favoriteButtonTapped(_ sender: Any) {
+        book.isFavorite.toggle()
+        UserDefaults.standard.synchronize()
         dismiss(animated: true)
     }
     
-
-    
+    private func save() {
+        guard let entityDescription = NSEntityDescription.entity(forEntityName: "Book", in: context) else {return}
+        guard var savedBook = NSManagedObject(entity: entityDescription, insertInto: context) as? Book else {return}
+        
+        savedBook.title = book.title
+        savedBook.subtitle = book.subtitle
+        savedBook.isbn13 = book.isbn13
+        savedBook.purchaseURL = book.purchaseURL
+        savedBook.thumbnailURL = book.thumbnailURL
+        savedBook.price = book.price
+        
+        if context.hasChanges {
+            do {
+                try context.save()
+            } catch let error {
+                print(error)
+            }
+        }
+        
+        dismiss(animated: true)
+    }
 }

@@ -8,21 +8,21 @@
 import UIKit
 import BookStoreKit
 
-final class TableBookViewController: UIViewController {
+class TableBookViewController: UIViewController {
     
-    private lazy var bookStore: BookStoreService = unspecified()
+    lazy var bookStore: BookStoreService = unspecified()
     @IBOutlet weak var tableView: UITableView!
     
     private(set) var books = [Book]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         setupTableView()
         bookStore.fetchNewReleases(completionHandler: handle)
     }
     
-    private func handle(_ result: Result<NewBooksResponse, Error>) {
+    func handle(_ result: Result<NewBooksResponse, Error>) {
         switch result {
         case .success(let response):
             books = response.books
@@ -32,7 +32,7 @@ final class TableBookViewController: UIViewController {
         }
     }
     
-    private func setupTableView() {
+    func setupTableView() {
         tableView?.register(BookCell.self)
         tableView?.delegate = self
         tableView?.dataSource = self
@@ -61,7 +61,7 @@ extension TableBookViewController: UITableViewDataSource {
         cell.subtitleLabel?.text = book.subtitle
         cell.priceLabel?.text = book.price
         cell.isbn13Label?.text = book.isbn13
-
+        
         if let thumbnailURL = book.thumbnailURL {
             ImageProvider.shared.fetch(from: thumbnailURL) { (result) in
                 if case .success(let image) = result, cell.identifier == book.isbn13 {
@@ -77,7 +77,7 @@ extension TableBookViewController: UITableViewDataSource {
 extension TableBookViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let book = books[indexPath.row]
-        let bookInfoViewController = BookInfoViewController.instatiate(isbn13: book.isbn13, bookStore: bookStore)
+        let bookInfoViewController = BookInfoViewController.instatiate(isbn13: book.isbn13, bookStore: bookStore, book: book)
         present(bookInfoViewController, animated: true, completion: nil)
     }
 }

@@ -20,4 +20,5 @@ struct ITBookStoreService: BookStoreService {
     func fetchInfo(with isbn13: String, completionHandler: @escaping (Result<BookInfo, Error>) -> Void) {
         BookStore.fetchInfo(with: isbn13, completionHandler: completionHandler)
     }
+
 }
