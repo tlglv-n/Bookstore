@@ -21,7 +21,6 @@
 		EC246A152A019B9700E030B7 /* BookInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC246A142A019B9700E030B7 /* BookInfoViewController.swift */; };
 		EC246A1D2A022B8900E030B7 /* BookCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC246A1C2A022B8900E030B7 /* BookCell.xib */; };
 		EC246A1F2A022BA000E030B7 /* BookCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC246A1E2A022BA000E030B7 /* BookCell.swift */; };
-		EC463CA92A0C37240085B7FA /* BookFavoriteDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC463CA82A0C37240085B7FA /* BookFavoriteDelegate.swift */; };
 		EC59D4CC29FEF84D00C082B7 /* Networking.docc in Sources */ = {isa = PBXBuildFile; fileRef = EC59D4CB29FEF84D00C082B7 /* Networking.docc */; };
 		EC59D4D229FEF84D00C082B7 /* Networking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC59D4C829FEF84D00C082B7 /* Networking.framework */; };
 		EC59D4D929FEF84D00C082B7 /* NetworkingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC59D4D829FEF84D00C082B7 /* NetworkingTests.swift */; };
@@ -160,7 +159,6 @@
 		EC246A142A019B9700E030B7 /* BookInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookInfoViewController.swift; sourceTree = "<group>"; };
 		EC246A1C2A022B8900E030B7 /* BookCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BookCell.xib; sourceTree = "<group>"; };
 		EC246A1E2A022BA000E030B7 /* BookCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookCell.swift; sourceTree = "<group>"; };
-		EC463CA82A0C37240085B7FA /* BookFavoriteDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookFavoriteDelegate.swift; sourceTree = "<group>"; };
 		EC59D4C829FEF84D00C082B7 /* Networking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Networking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC59D4CA29FEF84D00C082B7 /* Networking.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Networking.h; sourceTree = "<group>"; };
 		EC59D4CB29FEF84D00C082B7 /* Networking.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = Networking.docc; sourceTree = "<group>"; };
@@ -475,7 +473,6 @@
 				ECEDA38D29F4865E00E27A84 /* BookStoreService.swift */,
 				EC2469F92A00254400E030B7 /* BookStoreView.swift */,
 				EC2469FB2A00258D00E030B7 /* ITBookStoreService.swift */,
-				EC463CA82A0C37240085B7FA /* BookFavoriteDelegate.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -765,7 +762,6 @@
 				ECEDA34229E8168000E27A84 /* Dynamic.swift in Sources */,
 				ECEDA38B29EC9BB300E27A84 /* TableFavoritesViewController.swift in Sources */,
 				ECEDA32229E7373400E27A84 /* AppDelegate.swift in Sources */,
-				EC463CA92A0C37240085B7FA /* BookFavoriteDelegate.swift in Sources */,
 				ECEDA35129EB10F400E27A84 /* AuthService.swift in Sources */,
 				EC2469FC2A00258D00E030B7 /* ITBookStoreService.swift in Sources */,
 				ECEDA38729EC8E4400E27A84 /* User.swift in Sources */,

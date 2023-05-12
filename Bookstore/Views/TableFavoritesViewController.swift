@@ -19,15 +19,17 @@ class TableFavoritesViewController: TableBookViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         setupTableView()
-//        bookStore.fetchNewReleases(completionHandler: handle)
         bookStore.fetchNewReleases(completionHandler: handle)
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        print(favorites)
+        super.viewWillAppear(animated)
+        bookStore.fetchNewReleases(completionHandler: handle)
+        favoriteTableView?.reloadData()
     }
-
+    
     override func setupTableView() {
         favoriteTableView?.register(BookCell.self)
         favoriteTableView?.delegate = self
@@ -83,7 +85,7 @@ extension TableFavoritesViewController {
 extension TableFavoritesViewController {
     override func tableView (_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let book = favorites[indexPath.row]
-        let bookInfoViewController = BookInfoViewController.instatiate(isbn13: book.isbn13 ?? "", bookStore: bookStore, book: book)
+        let bookInfoViewController = BookInfoViewController.instatiate(isbn13: book.isbn13, bookStore: bookStore, book: book)
         present(bookInfoViewController, animated: true, completion: nil)
     }
 }

@@ -34,8 +34,6 @@ class BookInfoViewController: UIViewController {
     private(set) lazy var isbn13: String = unspecified()
     private lazy var bookStore: BookStoreService = unspecified()
     
-    private let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -100,28 +98,8 @@ class BookInfoViewController: UIViewController {
     @IBAction func favoriteButtonTapped(_ sender: Any) {
         book.isFavorite.toggle()
         UserDefaults.standard.synchronize()
+        
         dismiss(animated: true)
     }
     
-    private func save() {
-        guard let entityDescription = NSEntityDescription.entity(forEntityName: "Book", in: context) else {return}
-        guard var savedBook = NSManagedObject(entity: entityDescription, insertInto: context) as? Book else {return}
-        
-        savedBook.title = book.title
-        savedBook.subtitle = book.subtitle
-        savedBook.isbn13 = book.isbn13
-        savedBook.purchaseURL = book.purchaseURL
-        savedBook.thumbnailURL = book.thumbnailURL
-        savedBook.price = book.price
-        
-        if context.hasChanges {
-            do {
-                try context.save()
-            } catch let error {
-                print(error)
-            }
-        }
-        
-        dismiss(animated: true)
-    }
 }
